@@ -1,0 +1,12 @@
+[Unit]
+Description=Eject Button LED Control
+After=mediacenter.service
+
+[Service]
+Type=simple
+User=root
+ExecStart= /usr/bin/python3 /home/pi/scripts/eject_button.py
+Restart=always
+
+[Install]
+WantedBy=default.target
